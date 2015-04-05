@@ -20,9 +20,8 @@
   [super viewDidLoad];
 
   ListManagerClass *listManager = [ListManagerClass defaultList];
-  [listManager loadFromFile];
   
-//  [listManager createData];
+  [listManager createData];
 
   [listManager addData:@"0999"];
   NSLog(@"%@",listManager.list);

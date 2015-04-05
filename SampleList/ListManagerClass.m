@@ -12,6 +12,7 @@
 @implementation ListManagerClass
 
 static ListManagerClass *defaultList = nil;
+static NSInteger listCount = 1000;
 
 #pragma mark - LifeCycle
 
@@ -30,6 +31,7 @@ static ListManagerClass *defaultList = nil;
     return defaultList;
   }
   self = [super init];
+  [self loadFromFile];
   return self;
 }
 
@@ -41,8 +43,8 @@ static ListManagerClass *defaultList = nil;
   [timer start];
 
   self.list = [NSMutableArray array];
-  for (NSInteger i = 1; i < 1001; i++) {
-    [self.list addObject:[NSString stringWithFormat:@"%04ld", (long)i]];
+  for (NSInteger i = 0; i < listCount; i++) {
+    [self.list addObject:[NSString stringWithFormat:@"%04ld", (long)i + 1]];
   }
 
   [timer stop];
@@ -63,8 +65,8 @@ static ListManagerClass *defaultList = nil;
   [self.list insertObject:data atIndex:0];
 
   // 最終的に1000件を超えていたら最後のデータを削除
-  if ([self.list count] > 1000) {
-    [self.list removeObjectAtIndex:1000];
+  if ([self.list count] > listCount) {
+    [self.list removeObjectAtIndex:listCount];
   }
 
   [self saveToFile];
@@ -94,10 +96,10 @@ static ListManagerClass *defaultList = nil;
 
   if ([self searchData:data] != NSNotFound) {
     [timer stop];
-    return NO;
+    return YES;
   } else {
     [timer stop];
-    return YES;
+    return NO;
   }
 }
 
