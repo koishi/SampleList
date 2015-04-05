@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface ListManagerClass : NSObject
+{
+  NSArray *list;
+}
+
++ (instancetype)listManager;
 
 @end

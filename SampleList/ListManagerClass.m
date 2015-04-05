@@ -10,4 +10,14 @@
 
 @implementation ListManagerClass
 
+static ListManagerClass *listManager = nil;
+
++ (instancetype)listManager
+{
+  if (listManager) {
+    listManager = [[ListManagerClass alloc]init];
+  }
+  return listManager;
+}
+
 @end
