@@ -9,32 +9,45 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface SampleListTests : XCTestCase
+#import "ListManagerClass.h"
+
+@interface SampleListTests : XCTestCase {
+  ListManagerClass *listManager;
+}
 
 @end
 
 @implementation SampleListTests
 
 - (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+  [super setUp];
+  listManager = [ListManagerClass defaultList];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+  // Put teardown code here. This method is called after the invocation of each test method in the class.
+  [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testCreateList
+{
+  [listManager createData];
+  XCTAssertEqual([listManager.list count], 1000);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testAdd
+{
+  [listManager addData:@"123456"];
+  XCTAssertEqual([listManager.list count], 1000);
+  XCTAssertEqual([listManager searchData:@"123456"], 0);
 }
+
+//- (void)testPerformanceExample
+//{
+//  // This is an example of a performance test case.
+//  [self measureBlock:^{
+//    // Put the code you want to measure the time of here.
+//  }];
+//}
 
 @end
