@@ -7,6 +7,7 @@
 //
 
 #import "ListManagerClass.h"
+#import "TimerClass.h"
 
 @implementation ListManagerClass
 
@@ -32,10 +33,15 @@ static ListManagerClass *defaultList = nil;
 
 - (void)createData
 {
+  TimerClass *timer = [[TimerClass alloc]init];
+  [timer start];
+
   self.list = [NSMutableArray array];
   for (NSInteger i = 0; i < 1000; i++) {
     [self.list addObject:[NSString stringWithFormat:@"%04ld", (long)i]];
   }
+
+  [timer stop];
 }
 
 @end

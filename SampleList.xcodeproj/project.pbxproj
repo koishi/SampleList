@@ -15,6 +15,7 @@
 		431399F11AD0DE6200BCFF39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */; };
 		431399FD1AD0DE6200BCFF39 /* SampleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431399FC1AD0DE6200BCFF39 /* SampleListTests.m */; };
 		43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A071AD0E0D100BCFF39 /* ListManagerClass.m */; };
+		43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		431399FC1AD0DE6200BCFF39 /* SampleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleListTests.m; sourceTree = "<group>"; };
 		43139A061AD0E0D100BCFF39 /* ListManagerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListManagerClass.h; sourceTree = "<group>"; };
 		43139A071AD0E0D100BCFF39 /* ListManagerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListManagerClass.m; sourceTree = "<group>"; };
+		43139A091AD0EC6B00BCFF39 /* TimerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
+		43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				431399E01AD0DE6200BCFF39 /* Supporting Files */,
 				43139A061AD0E0D100BCFF39 /* ListManagerClass.h */,
 				43139A071AD0E0D100BCFF39 /* ListManagerClass.m */,
+				43139A091AD0EC6B00BCFF39 /* TimerClass.h */,
+				43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */,
 			);
 			path = SampleList;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				431399E91AD0DE6200BCFF39 /* ViewController.m in Sources */,
 				431399E61AD0DE6200BCFF39 /* AppDelegate.m in Sources */,
+				43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */,
 				43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */,
 				431399E31AD0DE6200BCFF39 /* main.m in Sources */,
 			);

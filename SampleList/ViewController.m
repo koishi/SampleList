@@ -21,7 +21,7 @@
   ListManagerClass *listManager = [ListManagerClass defaultList];
   [listManager createData];
 
-  NSLog(@"%@",listManager.list);
+//  NSLog(@"%@",listManager.list);
 }
 
 - (void)didReceiveMemoryWarning {
