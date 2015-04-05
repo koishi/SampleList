@@ -46,8 +46,13 @@ static ListManagerClass *defaultList = nil;
 
 - (void)addData:(NSString *)data
 {
-  [self.list addObject:data];
-  [self.list count];
+//  [self.list addObject:data];
+  [self.list insertObject:data atIndex:0];
+
+  if ([self.list count] > 1000) {
+    [self.list removeObjectAtIndex:1000];
+  }
+  
 }
 
 @end
