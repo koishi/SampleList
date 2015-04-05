@@ -35,19 +35,29 @@
   XCTAssertEqual([listManager.list count], 1000);
 }
 
-- (void)testAdd
+- (void)testAddData
 {
+  [listManager createData];
+
   [listManager addData:@"123456"];
   XCTAssertEqual([listManager.list count], 1000);
   XCTAssertEqual([listManager searchData:@"123456"], 0);
+
+  [listManager addData:@"1234567"];
+  XCTAssertEqual([listManager.list count], 1000);
+  XCTAssertEqual([listManager searchData:@"1234567"], 0);
+  XCTAssertEqual([listManager searchData:@"123456"], 1);
 }
 
-//- (void)testPerformanceExample
-//{
-//  // This is an example of a performance test case.
-//  [self measureBlock:^{
-//    // Put the code you want to measure the time of here.
-//  }];
-//}
+- (void)testRemoveLastData
+{
+  [listManager createData];
+  XCTAssertEqual([listManager searchData:@"1000"], 999);
+
+  [listManager addData:@"123456"];
+  XCTAssertEqual([listManager searchData:@"1000"], NSNotFound);
+
+  XCTAssertEqual([listManager searchData:@"0999"], 999);
+}
 
 @end

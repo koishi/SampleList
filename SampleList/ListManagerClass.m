@@ -78,11 +78,9 @@ static NSInteger listCount = 1000;
   // 配列から要素を検索する
   NSInteger index = [self.list indexOfObject:data];
 
-  // 要素があったか?
   if (index != NSNotFound) {
     NSLog(@"%i番目にありました．", index);
-    
-  } else { // no
+  } else {
     NSLog(@"見つかりませんでした．");
   }
 
