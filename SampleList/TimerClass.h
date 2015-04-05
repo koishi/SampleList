@@ -10,4 +10,8 @@
 
 @interface TimerClass : NSObject
 
+- (void)start;
+
+- (void)stop;
+
 @end
