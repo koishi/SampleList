@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface ListManagerClass : NSObject
-{
-  NSArray *list;
-}
 
-+ (instancetype)listManager;
+@property NSMutableArray *list;
+
++ (ListManagerClass *)defaultList;
+
+- (void)createData;
+
+- (void)addData:(NSString*)data;
+
+- (BOOL)searchData:(NSString*)data;
 
 @end

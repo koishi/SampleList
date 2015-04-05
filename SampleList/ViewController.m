@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ListManagerClass.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+
+  ListManagerClass *listManager = [ListManagerClass defaultList];
+  [listManager createData];
+
+  NSLog(@"%@",listManager.list);
 }
 
 - (void)didReceiveMemoryWarning {

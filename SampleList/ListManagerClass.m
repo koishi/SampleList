@@ -10,14 +10,32 @@
 
 @implementation ListManagerClass
 
-static ListManagerClass *listManager = nil;
+static ListManagerClass *defaultList = nil;
 
-+ (instancetype)listManager
++ (ListManagerClass *)defaultList
 {
-  if (listManager) {
-    listManager = [[ListManagerClass alloc]init];
+  if (!defaultList)
+  {
+    defaultList = [[ListManagerClass alloc]init];
   }
-  return listManager;
+  return defaultList;
+}
+
+- (id)init
+{
+  if (defaultList) {
+    return defaultList;
+  }
+  self = [super init];
+  return self;
+}
+
+- (void)createData
+{
+  self.list = [NSMutableArray array];
+  for (NSInteger i = 0; i < 1000; i++) {
+    [self.list addObject:[NSString stringWithFormat:@"%04ld", (long)i]];
+  }
 }
 
 @end
