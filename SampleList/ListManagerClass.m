@@ -55,7 +55,7 @@ static ListManagerClass *defaultList = nil;
 
   // 同じデータが無いか調べる
   NSInteger index = [self searchData:data];
-  if (index > -1) {
+  if (index != NSNotFound) {
     [self.list removeObjectAtIndex:index];
   }
   
@@ -73,17 +73,18 @@ static ListManagerClass *defaultList = nil;
 
 - (NSInteger)searchData:(NSString *)data
 {
-  // オブジェクト型でない変数をBlock内で操作する場合は__block修飾子が必要
-  __block NSInteger result = -1;
+  // 配列から要素を検索する
+  NSInteger index = [self.list indexOfObject:data];
 
-  [self.list enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
-    if ([obj isEqualToString:data]) {
-      result = idx;
-      *stop = YES;
-    }
-  }];
+  // 要素があったか?
+  if (index != NSNotFound) {
+    NSLog(@"%i番目にありました．", index);
+    
+  } else { // no
+    NSLog(@"見つかりませんでした．");
+  }
 
-  return result;
+  return index;
 }
 
 - (BOOL)searchDataBool:(NSString *)data
@@ -91,7 +92,7 @@ static ListManagerClass *defaultList = nil;
   TimerClass *timer = [[TimerClass alloc]init];
   [timer start];
 
-  if ([self searchData:data] == -1) {
+  if ([self searchData:data] != NSNotFound) {
     [timer stop];
     return NO;
   } else {
