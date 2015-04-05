@@ -16,8 +16,8 @@
 
 - (void)createData;
 
-- (void)addData:(NSString*)data;
+- (void)addData:(NSString *)data;
 
-- (BOOL)searchData:(NSString*)data;
+- (NSInteger)searchData:(NSString *)data;
 
 @end

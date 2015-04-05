@@ -21,7 +21,7 @@
   ListManagerClass *listManager = [ListManagerClass defaultList];
   [listManager createData];
 
-  [listManager addData:@"99999"];
+  [listManager addData:@"0999"];
   NSLog(@"%@",listManager.list);
 }
 
