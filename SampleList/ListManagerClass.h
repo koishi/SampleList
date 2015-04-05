@@ -20,4 +20,6 @@
 
 - (NSInteger)searchData:(NSString *)data;
 
+- (BOOL)loadFromFile;
+
 @end

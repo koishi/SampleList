@@ -13,6 +13,8 @@
 
 static ListManagerClass *defaultList = nil;
 
+#pragma mark - LifeCycle
+
 + (ListManagerClass *)defaultList
 {
   if (!defaultList)
@@ -30,6 +32,8 @@ static ListManagerClass *defaultList = nil;
   self = [super init];
   return self;
 }
+
+#pragma mark - Method
 
 - (void)createData
 {
@@ -63,6 +67,7 @@ static ListManagerClass *defaultList = nil;
     [self.list removeObjectAtIndex:1000];
   }
 
+  [self saveToFile];
   [timer stop];
 }
 
@@ -79,6 +84,40 @@ static ListManagerClass *defaultList = nil;
   }];
 
   return result;
+}
+
+#pragma mark - FileSystem
+
+- (NSString*)filePath
+{
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *directory = [paths objectAtIndex:0];
+  return [directory stringByAppendingPathComponent:@"data.plist"];
+}
+
+- (BOOL)saveToFile
+{
+  BOOL successful = [self.list writeToFile:[self filePath] atomically:NO];
+  if (successful) {
+    NSLog(@"%@", @"データの保存に成功しました。");
+  }
+  return successful;
+}
+
+- (BOOL)loadFromFile
+{
+  TimerClass *timer = [[TimerClass alloc]init];
+  [timer start];
+
+  NSArray *array = [[NSArray alloc] initWithContentsOfFile:[self filePath]];
+  if (array) {
+    NSLog(@"%@", @"データは存在しました。");
+  } else {
+    NSLog(@"%@", @"データが存在しません。");
+  }
+
+  [timer stop];
+  return YES;
 }
 
 @end
