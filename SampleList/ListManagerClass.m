@@ -44,4 +44,10 @@ static ListManagerClass *defaultList = nil;
   [timer stop];
 }
 
+- (void)addData:(NSString *)data
+{
+  [self.list addObject:data];
+  [self.list count];
+}
+
 @end
