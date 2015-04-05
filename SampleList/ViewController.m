@@ -15,7 +15,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
   [super viewDidLoad];
 
   ListManagerClass *listManager = [ListManagerClass defaultList];
@@ -25,9 +26,29 @@
 
   [listManager addData:@"0999"];
   NSLog(@"%@",listManager.list);
+
+  if ([listManager searchDataBool:@"0999"]) {
+    NSLog(@"発見しました");
+  } else {
+    NSLog(@"見つかりませんでした");
+  }
+  
+  if ([listManager searchDataBool:@"1000"]) {
+    NSLog(@"発見しました");
+  } else {
+    NSLog(@"見つかりませんでした");
+  }
+
+  if ([listManager searchDataBool:@"1001"]) {
+    NSLog(@"発見しました");
+  } else {
+    NSLog(@"見つかりませんでした");
+  }
+  
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }

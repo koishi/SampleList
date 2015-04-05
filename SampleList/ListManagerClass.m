@@ -86,6 +86,20 @@ static ListManagerClass *defaultList = nil;
   return result;
 }
 
+- (BOOL)searchDataBool:(NSString *)data
+{
+  TimerClass *timer = [[TimerClass alloc]init];
+  [timer start];
+
+  if ([self searchData:data] == -1) {
+    [timer stop];
+    return NO;
+  } else {
+    [timer stop];
+    return YES;
+  }
+}
+
 #pragma mark - FileSystem
 
 - (NSString*)filePath
@@ -109,8 +123,8 @@ static ListManagerClass *defaultList = nil;
   TimerClass *timer = [[TimerClass alloc]init];
   [timer start];
 
-  NSArray *array = [[NSArray alloc] initWithContentsOfFile:[self filePath]];
-  if (array) {
+  self.list = [[NSMutableArray alloc] initWithContentsOfFile:[self filePath]];
+  if (self.list) {
     NSLog(@"%@", @"データは存在しました。");
   } else {
     NSLog(@"%@", @"データが存在しません。");
