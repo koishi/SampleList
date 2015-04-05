@@ -27,21 +27,12 @@
   NSLog(@"%@",listManager.list);
 
   if ([listManager searchDataBool:@"0999"]) {
-    NSLog(@"発見しました");
-  } else {
-    NSLog(@"見つかりませんでした");
   }
   
   if ([listManager searchDataBool:@"1000"]) {
-    NSLog(@"発見しました");
-  } else {
-    NSLog(@"見つかりませんでした");
   }
 
   if ([listManager searchDataBool:@"1001"]) {
-    NSLog(@"発見しました");
-  } else {
-    NSLog(@"見つかりませんでした");
   }
   
 }
