@@ -87,18 +87,12 @@
 		431399DF1AD0DE6200BCFF39 /* SampleList */ = {
 			isa = PBXGroup;
 			children = (
+				43139A0D1AD0EF5700BCFF39 /* Classes */,
+				43139A0C1AD0EF4700BCFF39 /* Views */,
+				431399E01AD0DE6200BCFF39 /* Supporting Files */,
 				431399E41AD0DE6200BCFF39 /* AppDelegate.h */,
 				431399E51AD0DE6200BCFF39 /* AppDelegate.m */,
-				431399E71AD0DE6200BCFF39 /* ViewController.h */,
-				431399E81AD0DE6200BCFF39 /* ViewController.m */,
-				431399EA1AD0DE6200BCFF39 /* Main.storyboard */,
 				431399ED1AD0DE6200BCFF39 /* Images.xcassets */,
-				431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */,
-				431399E01AD0DE6200BCFF39 /* Supporting Files */,
-				43139A061AD0E0D100BCFF39 /* ListManagerClass.h */,
-				43139A071AD0E0D100BCFF39 /* ListManagerClass.m */,
-				43139A091AD0EC6B00BCFF39 /* TimerClass.h */,
-				43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */,
 			);
 			path = SampleList;
 			sourceTree = "<group>";
@@ -127,6 +121,28 @@
 				431399FB1AD0DE6200BCFF39 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43139A0C1AD0EF4700BCFF39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				431399E71AD0DE6200BCFF39 /* ViewController.h */,
+				431399E81AD0DE6200BCFF39 /* ViewController.m */,
+				431399EA1AD0DE6200BCFF39 /* Main.storyboard */,
+				431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		43139A0D1AD0EF5700BCFF39 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				43139A061AD0E0D100BCFF39 /* ListManagerClass.h */,
+				43139A071AD0E0D100BCFF39 /* ListManagerClass.m */,
+				43139A091AD0EC6B00BCFF39 /* TimerClass.h */,
+				43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
