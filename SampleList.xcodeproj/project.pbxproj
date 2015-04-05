@@ -14,6 +14,10 @@
 		431399EE1AD0DE6200BCFF39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431399ED1AD0DE6200BCFF39 /* Images.xcassets */; };
 		431399F11AD0DE6200BCFF39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */; };
 		431399FD1AD0DE6200BCFF39 /* SampleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431399FC1AD0DE6200BCFF39 /* SampleListTests.m */; };
+		43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A071AD0E0D100BCFF39 /* ListManagerClass.m */; };
+		43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */; };
+		43139A0F1AD10EE900BCFF39 /* ListManagerClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A0E1AD10EE900BCFF39 /* ListManagerClassTest.m */; };
+		43139A121AD11F3E00BCFF39 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A111AD11F3E00BCFF39 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		431399F61AD0DE6200BCFF39 /* SampleListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431399FB1AD0DE6200BCFF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431399FC1AD0DE6200BCFF39 /* SampleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleListTests.m; sourceTree = "<group>"; };
+		43139A061AD0E0D100BCFF39 /* ListManagerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListManagerClass.h; sourceTree = "<group>"; };
+		43139A071AD0E0D100BCFF39 /* ListManagerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListManagerClass.m; sourceTree = "<group>"; };
+		43139A091AD0EC6B00BCFF39 /* TimerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
+		43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerClass.m; sourceTree = "<group>"; };
+		43139A0E1AD10EE900BCFF39 /* ListManagerClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListManagerClassTest.m; sourceTree = "<group>"; };
+		43139A101AD11F3E00BCFF39 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		43139A111AD11F3E00BCFF39 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +92,12 @@
 		431399DF1AD0DE6200BCFF39 /* SampleList */ = {
 			isa = PBXGroup;
 			children = (
+				43139A0D1AD0EF5700BCFF39 /* Classes */,
+				43139A0C1AD0EF4700BCFF39 /* Views */,
+				431399E01AD0DE6200BCFF39 /* Supporting Files */,
 				431399E41AD0DE6200BCFF39 /* AppDelegate.h */,
 				431399E51AD0DE6200BCFF39 /* AppDelegate.m */,
-				431399E71AD0DE6200BCFF39 /* ViewController.h */,
-				431399E81AD0DE6200BCFF39 /* ViewController.m */,
-				431399EA1AD0DE6200BCFF39 /* Main.storyboard */,
 				431399ED1AD0DE6200BCFF39 /* Images.xcassets */,
-				431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */,
-				431399E01AD0DE6200BCFF39 /* Supporting Files */,
 			);
 			path = SampleList;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				431399FC1AD0DE6200BCFF39 /* SampleListTests.m */,
+				43139A0E1AD10EE900BCFF39 /* ListManagerClassTest.m */,
 				431399FA1AD0DE6200BCFF39 /* Supporting Files */,
 			);
 			path = SampleListTests;
@@ -117,6 +127,30 @@
 				431399FB1AD0DE6200BCFF39 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43139A0C1AD0EF4700BCFF39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				431399E71AD0DE6200BCFF39 /* ViewController.h */,
+				431399E81AD0DE6200BCFF39 /* ViewController.m */,
+				43139A101AD11F3E00BCFF39 /* TableViewController.h */,
+				43139A111AD11F3E00BCFF39 /* TableViewController.m */,
+				431399EA1AD0DE6200BCFF39 /* Main.storyboard */,
+				431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		43139A0D1AD0EF5700BCFF39 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				43139A061AD0E0D100BCFF39 /* ListManagerClass.h */,
+				43139A071AD0E0D100BCFF39 /* ListManagerClass.m */,
+				43139A091AD0EC6B00BCFF39 /* TimerClass.h */,
+				43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +254,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				431399E91AD0DE6200BCFF39 /* ViewController.m in Sources */,
+				43139A121AD11F3E00BCFF39 /* TableViewController.m in Sources */,
 				431399E61AD0DE6200BCFF39 /* AppDelegate.m in Sources */,
+				43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */,
+				43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */,
 				431399E31AD0DE6200BCFF39 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43139A0F1AD10EE900BCFF39 /* ListManagerClassTest.m in Sources */,
 				431399FD1AD0DE6200BCFF39 /* SampleListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,6 +386,7 @@
 				INFOPLIST_FILE = SampleList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,6 +397,7 @@
 				INFOPLIST_FILE = SampleList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -414,6 +454,7 @@
 				43139A021AD0DE6200BCFF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43139A031AD0DE6200BCFF39 /* Build configuration list for PBXNativeTarget "SampleListTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +463,7 @@
 				43139A051AD0DE6200BCFF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
