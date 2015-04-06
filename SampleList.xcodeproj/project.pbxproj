@@ -15,7 +15,6 @@
 		431399F11AD0DE6200BCFF39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431399EF1AD0DE6200BCFF39 /* LaunchScreen.xib */; };
 		431399FD1AD0DE6200BCFF39 /* SampleListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431399FC1AD0DE6200BCFF39 /* SampleListTests.m */; };
 		43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A071AD0E0D100BCFF39 /* ListManagerClass.m */; };
-		43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */; };
 		43139A0F1AD10EE900BCFF39 /* ListManagerClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A0E1AD10EE900BCFF39 /* ListManagerClassTest.m */; };
 		43139A121AD11F3E00BCFF39 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43139A111AD11F3E00BCFF39 /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -46,8 +45,6 @@
 		431399FC1AD0DE6200BCFF39 /* SampleListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleListTests.m; sourceTree = "<group>"; };
 		43139A061AD0E0D100BCFF39 /* ListManagerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListManagerClass.h; sourceTree = "<group>"; };
 		43139A071AD0E0D100BCFF39 /* ListManagerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListManagerClass.m; sourceTree = "<group>"; };
-		43139A091AD0EC6B00BCFF39 /* TimerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
-		43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerClass.m; sourceTree = "<group>"; };
 		43139A0E1AD10EE900BCFF39 /* ListManagerClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListManagerClassTest.m; sourceTree = "<group>"; };
 		43139A101AD11F3E00BCFF39 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		43139A111AD11F3E00BCFF39 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 			children = (
 				43139A061AD0E0D100BCFF39 /* ListManagerClass.h */,
 				43139A071AD0E0D100BCFF39 /* ListManagerClass.m */,
-				43139A091AD0EC6B00BCFF39 /* TimerClass.h */,
-				43139A0A1AD0EC6B00BCFF39 /* TimerClass.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -256,7 +251,6 @@
 				431399E91AD0DE6200BCFF39 /* ViewController.m in Sources */,
 				43139A121AD11F3E00BCFF39 /* TableViewController.m in Sources */,
 				431399E61AD0DE6200BCFF39 /* AppDelegate.m in Sources */,
-				43139A0B1AD0EC6B00BCFF39 /* TimerClass.m in Sources */,
 				43139A081AD0E0D200BCFF39 /* ListManagerClass.m in Sources */,
 				431399E31AD0DE6200BCFF39 /* main.m in Sources */,
 			);

@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import "ListManagerClass.h"
-
-@interface SampleListTests : XCTestCase {
-  ListManagerClass *listManager;
-}
+@interface SampleListTests : XCTestCase
 
 @end
 
@@ -21,7 +17,7 @@
 
 - (void)setUp {
   [super setUp];
-  listManager = [ListManagerClass defaultList];
+  // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
@@ -29,35 +25,16 @@
   [super tearDown];
 }
 
-- (void)testCreateList
-{
-  [listManager createData];
-  XCTAssertEqual([listManager.list count], 1000);
+- (void)testExample {
+  // This is an example of a functional test case.
+  XCTAssert(YES, @"Pass");
 }
 
-- (void)testAddData
-{
-  [listManager createData];
-
-  [listManager addData:@"123456"];
-  XCTAssertEqual([listManager.list count], 1000);
-  XCTAssertEqual([listManager searchData:@"123456"], 0);
-
-  [listManager addData:@"1234567"];
-  XCTAssertEqual([listManager.list count], 1000);
-  XCTAssertEqual([listManager searchData:@"1234567"], 0);
-  XCTAssertEqual([listManager searchData:@"123456"], 1);
-}
-
-- (void)testRemoveLastData
-{
-  [listManager createData];
-  XCTAssertEqual([listManager searchData:@"1000"], 999);
-
-  [listManager addData:@"123456"];
-  XCTAssertEqual([listManager searchData:@"1000"], NSNotFound);
-
-  XCTAssertEqual([listManager searchData:@"0999"], 999);
+- (void)testPerformanceExample {
+  // This is an example of a performance test case.
+  [self measureBlock:^{
+    // Put the code you want to measure the time of here.
+  }];
 }
 
 @end

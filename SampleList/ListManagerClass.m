@@ -7,7 +7,6 @@
 //
 
 #import "ListManagerClass.h"
-#import "TimerClass.h"
 
 @implementation ListManagerClass
 
@@ -39,22 +38,14 @@ static NSInteger listCount = 1000;
 
 - (void)createData
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-
   self.list = [NSMutableArray array];
   for (NSInteger i = 0; i < listCount; i++) {
     [self.list addObject:[NSString stringWithFormat:@"%04ld", (long)i + 1]];
   }
-
-  [timer stop];
 }
 
 - (void)addData:(NSString *)data
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-
   // 同じデータが無いか調べる
   NSInteger index = [self searchData:data];
   if (index != NSNotFound) {
@@ -68,40 +59,24 @@ static NSInteger listCount = 1000;
   if ([self.list count] > listCount) {
     [self.list removeObjectAtIndex:listCount];
   }
-
-//  [self saveToFile];
-  [timer stop];
 }
 
 - (NSInteger)searchData:(NSString *)data
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-  
   // 配列から要素を検索する
   NSInteger index = [self.list indexOfObject:data];
 
   if (index != NSNotFound) {
-//    NSLog(@"%i番目にありました．", index);
-  } else {
-//    NSLog(@"見つかりませんでした．");
   }
-
-  [timer stop];
 
   return index;
 }
 
 - (BOOL)searchDataBool:(NSString *)data
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-
   if ([self searchData:data] != NSNotFound) {
-    [timer stop];
     return YES;
   } else {
-    [timer stop];
     return NO;
   }
 }
@@ -117,24 +92,15 @@ static NSInteger listCount = 1000;
 
 - (BOOL)saveToFile
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-
   BOOL successful = [self.list writeToFile:[self filePath] atomically:NO];
   if (successful) {
     NSLog(@"%@", @"データの保存に成功しました。");
-    
   }
-
-  [timer stop];
   return successful;
 }
 
 - (BOOL)loadFromFile
 {
-  TimerClass *timer = [[TimerClass alloc]init];
-  [timer start];
-
   self.list = [[NSMutableArray alloc] initWithContentsOfFile:[self filePath]];
   if (self.list) {
     NSLog(@"%@", @"データは存在しました。");
@@ -142,8 +108,6 @@ static NSInteger listCount = 1000;
     NSLog(@"%@", @"データが存在しません。");
     self.list = [NSMutableArray array];
   }
-
-  [timer stop];
   return YES;
 }
 
