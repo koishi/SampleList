@@ -75,4 +75,14 @@
   }];
 }
 
+- (void)testDataSearch
+{
+  [listManager createData];
+  [self measureBlock:^{
+      for (NSInteger i = 0; i < 1000; i++) {
+          [listManager searchData:@"testtest"];
+      }
+  }];
+}
+
 @end
